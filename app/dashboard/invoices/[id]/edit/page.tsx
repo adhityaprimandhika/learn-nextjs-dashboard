@@ -3,6 +3,12 @@ import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchInvoiceById, fetchCustomers } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 import React from 'react';
+
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Dashboard | Invoice | Edit',
+};
  
 export default async function Page({ params }: { params: { id: string } }) {
     const id = params.id;  
